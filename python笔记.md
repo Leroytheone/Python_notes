@@ -1,3 +1,5 @@
+[TOC]
+
 ### Python数据类型
 Number, String, List, Tuple, Set, Dictionary  
 不可变：Number, String, Tuple  
