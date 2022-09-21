@@ -1,5 +1,3 @@
-[TOC]
-
 ### Python数据类型
 Number, String, List, Tuple, Set, Dictionary  
 不可变：Number, String, Tuple  
@@ -62,5 +60,3 @@ Python 数据类型转换可以分为两种：
 在显式类型转换中，用户将对象的数据类型转换为所需的数据类型。 我们使用 int()、float()、str() 等预定义函数来执行显式类型转换。  
 
 ### Python推导式
-
-[TOC]
