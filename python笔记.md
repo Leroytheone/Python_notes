@@ -43,8 +43,10 @@ dic.keys() dic.values() 输出所有键或值
 实例  
 > dict([('Runoob', 1), ('Google', 2), ('Taobao', 3)])  
 >>{'Runoob': 1, 'Google': 2, 'Taobao': 3}  
+
 > {x: x**2 for x in (2, 4, 6)}  
 >>{2: 4, 4: 16, 6: 36}  
+
 > dict(Runoob=1, Google=2, Taobao=3)  
 >>{'Runoob': 1, 'Google': 2, 'Taobao': 3} 
 
