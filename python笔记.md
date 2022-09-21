@@ -1,6 +1,6 @@
 ### Python数据类型
-Number, String, List, Tuple, Set, Dictionary
-不可变：Number, String, Tuple
+Number, String, List, Tuple, Set, Dictionary  
+不可变：Number, String, Tuple  
 可变：List, Dictionary, Set
 
 ### Number: int, float, bool, complex
