@@ -1,3 +1,4 @@
+'''
 def reverseWords(input):
      
     # 通过空格将字符串分隔符，把各个单词分隔为列表
@@ -21,3 +22,10 @@ if __name__ == "__main__":
     input = 'I like runoob'
     rw = reverseWords(input)
     print(rw)
+    
+'''
+
+#var1 = "Hello world"
+#var1[-5:-1]
+
+print("\a")
