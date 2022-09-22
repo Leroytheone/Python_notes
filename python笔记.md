@@ -183,6 +183,7 @@ Python 的元组与列表类似，不同之处在于元组的元素不能修改�
 元组内置函数：len(tuple), max(tuple), min(tuple), tuple(iterable)
 
 ### Set:可以使用大括号 { } 或者 set() 函数创建集合，注意：创建一个空集合必须用 set() 而不是 { }，因为 { } 是用来创建一个空字典
+集合（set）是一个无序的不重复元素序列。  
 基本功能是进行成员关系测试和删除重复元素  
 sites = {'Google', 'Taobao', 'Runoob', 'Facebook', 'Zhihu', 'Baidu'}  
 set可以进行集合运算  
@@ -190,8 +191,8 @@ a = set('abracadabra')
 
 ### Dictionary: 列表是有序的对象集合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取
 字典是一种映射类型，字典用 { } 标识，它是一个无序的 键(key) : 值(value) 的集合  
-键(key)必须使用不可变类型  
-在同一个字典中，键(key)必须是唯一的  
+键(key)必须使用不可变类型，值可以取任何数据类型，但键必须是不可变的，如字符串，数字   
+在同一个字典中，键(key)必须是唯一的，但值不一定  
 dic.keys() dic.values() 输出所有键或值  
 构造函数 dict() 可以直接从键值对序列中构建字典如下：  
 实例  
@@ -205,7 +206,30 @@ dic.keys() dic.values() 输出所有键或值
     dict(Runoob=1, Google=2, Taobao=3)  
     > {'Runoob': 1, 'Google': 2, 'Taobao': 3} 
 
-创建空字典使用 { }  
+创建空字典使用 { }  也可以使用内建函数 dict() 创建字典：  
+字典值可以是任何的 python 对象，既可以是标准的对象，也可以是用户定义的，但键不行。  
+两个重要的点需要记住：  
+
+1）不允许同一个键出现两次。创建时如果同一个键被赋值两次，后一个值会被记住，  
+2）键必须不可变，所以可以用数字，字符串或元组充当，而用列表就不行  
+
+字典内置函数和方法：
+len(dict)
+str(dict): 输出字典，可以打印的字符串表示。  
+type(variable) 返回输入的变量类型，如果变量是字典就返回字典类型。
+
+dict.clear(): 删除字典内所有元素  
+dict.copy(): 返回一个字典的浅复制  
+dict.fromkeys(): 创建一个新字典，以序列seq中元素做字典的键，val为字典所有键对应的初始值  
+dict.get(key, default=None): 返回指定键的值，如果键不在字典中返回 default 设置的默认值  
+key in dict: 如果键在字典dict里返回true，否则返回false  
+dict.items(): 以列表返回一个视图对象  
+dict.keys(): 返回一个视图对象  
+dict.setdefault(key, default=None): 和get()类似, 但如果键不存在于字典中，将会添加键并将值设为default  
+dict.update(dict2): 把字典dict2的键/值对更新到dict里  
+dict.values(): 返回一个视图对象  
+pop(key[,default]): 删除字典 key（键）所对应的值，返回被删除的值。  
+popitem(): 返回并删除字典中的最后一对键和值。  
 
 ### 数据类型转换
 Python 数据类型转换可以分为两种：  
