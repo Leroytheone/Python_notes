@@ -297,5 +297,16 @@ Python 数据类型转换可以分为两种：
 
 ### 编程第一步
 end关键字：关键字end可以用于将结果输出到同一行，或者在输出的末尾添加不同的字符，实例如下：  
+print(b, end=',')
 
-'print(b, end=',')'
+### 条件控制
+if语句：  
+
+'''
+if condition_1:  
+    statement_block_1  
+elif condition_2:  
+    statement_block_2  
+else:  
+    statement_block_3  
+'''
