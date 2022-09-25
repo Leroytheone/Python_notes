@@ -28,4 +28,6 @@ if __name__ == "__main__":
 #var1 = "Hello world"
 #var1[-5:-1]
 
-print("\a")
+list=[1,2,3,4]
+for x in list:
+    print (x)
