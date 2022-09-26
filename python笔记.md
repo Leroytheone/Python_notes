@@ -373,14 +373,14 @@ def functionname([formal_args,] *var_args_tuple ):
    return [expression]  
 
 加了星号 * 的参数会以元组(tuple)的形式导入，存放所有未命名的变量参数。 
-# 可写函数说明
+#可写函数说明
 def printinfo( arg1, *vartuple ):  
    "打印任何传入的参数"  
    print ("输出: ")  
    print (arg1)  
    print (vartuple)  
  
-# 调用printinfo 函数  
+#调用printinfo 函数  
 printinfo( 70, 60, 50 )   
 
 以上实例输出结果：  
@@ -502,3 +502,10 @@ filename：包含了你要访问的文件名称的字符串值。
 mode：决定了打开文件的模式：只读，写入，追加等。所有可取值见如下的完全列表。这个参数是非强制的，默认文件访问模式为只读(r)  
 
 ### 错误和异常 
+
+### 面向对象
+Python从设计之初就已经是一门面向对象的语言，正因为如此，在Python中创建一个类和对象是很容易的  
+
+### 命名空间/作用域
+
+### 标准库概览
