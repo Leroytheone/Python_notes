@@ -28,6 +28,26 @@ if __name__ == "__main__":
 #var1 = "Hello world"
 #var1[-5:-1]
 
-list=[1,2,3,4]
+'''list=[1,2,3,4]
 for x in list:
-    print (x)
+    print (x)'''
+    
+'''#可写函数说明
+def printme( str ):
+   "打印任何传入的字符串"
+   print (str)
+ 
+# 调用 printme 函数，不加参数会报错
+printme('2sfd')'''
+
+# 可写函数说明
+def sum( arg1, arg2 ):
+   # 返回2个参数的和."
+   total = arg1 + arg2
+   print ("函数内 : ", total)
+   #return total
+ 
+# 调用sum函数
+a = sum( 10, 20 )
+#print ("函数外 : ", tota)
+type(a)
