@@ -140,47 +140,85 @@ def main():
 if __name__ == "__main__":
     main()'''
     
-from time import sleep
+'''class Person(object):
 
+    def __init__(self, name, age):
+        self._name = name
+        self._age = age
 
-class Clock(object):
-    """数字时钟"""
+    # 访问器 - getter方法
+    @property
+    def name(self):
+        return self._name
 
-    def __init__(self, hour=0, minute=0, second=0):
-        """初始化方法
+    # 访问器 - getter方法
+    @property
+    def age(self):
+        return self._age
 
-        :param hour: 时
-        :param minute: 分
-        :param second: 秒
-        """
-        self._hour = hour
-        self._minute = minute
-        self._second = second
+    # 修改器 - setter方法
+    @age.setter
+    def age(self, age):
+        self._age = age
 
-    def run(self):
-        """走字"""
-        self._second += 1
-        if self._second == 60:
-            self._second = 0
-            self._minute += 1
-            if self._minute == 60:
-                self._minute = 0
-                self._hour += 1
-                if self._hour == 24:
-                    self._hour = 0
-
-    def show(self):
-        """显示时间"""
-        return '%02d:%02d:%02d' % \
-               (self._hour, self._minute, self._second)
+    def play(self):
+        if self._age <= 16:
+            print('%s正在玩飞行棋.' % self._name)
+        else:
+            print('%s正在玩斗地主.' % self._name)
 
 
 def main():
-    clock = Clock(23, 59, 58)
-    while True:
-        print(clock.show())
-        sleep(1)
-        clock.run()
+    person = Person('王大锤', 12)
+    person.play()
+    person.age = 22
+    person.play()
+    # person.name = '白元芳'  # AttributeError: can't set attribute
+
+
+if __name__ == '__main__':
+    main()'''
+    
+    
+import tkinter
+import tkinter.messagebox
+
+
+def main():
+    flag = True
+
+    # 修改标签上的文字
+    def change_label_text():
+        nonlocal flag
+        flag = not flag
+        color, msg = ('red', 'Hello, world!')\
+            if flag else ('blue', 'Goodbye, world!')
+        label.config(text=msg, fg=color)
+
+    # 确认退出
+    def confirm_to_quit():
+        if tkinter.messagebox.askokcancel('温馨提示', '确定要退出吗?'):
+            top.quit()
+
+    # 创建顶层窗口
+    top = tkinter.Tk()
+    # 设置窗口大小
+    top.geometry('240x160')
+    # 设置窗口标题
+    top.title('小游戏')
+    # 创建标签对象并添加到顶层窗口
+    label = tkinter.Label(top, text='Hello, world!', font='Arial -32', fg='red')
+    label.pack(expand=1)
+    # 创建一个装按钮的容器
+    panel = tkinter.Frame(top)
+    # 创建按钮对象 指定添加到哪个容器中 通过command参数绑定事件回调函数
+    button1 = tkinter.Button(panel, text='修改', command=change_label_text)
+    button1.pack(side='left')
+    button2 = tkinter.Button(panel, text='退出', command=confirm_to_quit)
+    button2.pack(side='right')
+    panel.pack(side='bottom')
+    # 开启主事件循环
+    tkinter.mainloop()
 
 
 if __name__ == '__main__':
